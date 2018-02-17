@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.13/vue.js"></script>
+  <title>Document</title>
+</head>
+<body>
+  <!-- Top banner -->
+  <section class="top-banner" >
+      <div class="logo-wrapper_mid"><a href="#"><h1 class="brand-name">Sic<span>C</span>hya</h1></a></div>
+    <div class="logo-wrapper">
+      <img class="logo-img" src="img/sicchyaLogo.png" alt="Sicchya Logo" >
+      
+    </div>
+    
+    <div class="log-opt" >
+      <a href="#" class="login" >Login</a>
+      <a href="#" class="signup">Sign-up</a>
+    </div>
+  </section>
+  <!-- Navigation bar -->
+<div id="control">
+  <section id=" nav-container" class=" nav" >
+    <!-- side menu btn toggle -->
+    <div id="side-menu-icon" class="side-menu" >
+      <a href="#" onclick="sideMenuToggle()" >Menu</a>
+    </div>
+    <!-- Main nav bar -->
+    <ul class="nav-bar">
+     <li><a href="#">Forum</a></li>
+     <li><a href="#">Members</a></li>
+     <li><a href="#">New Posts</a></li>
+     <li><a href="#">Forum Actions</a></li>
+     <li><a href="#">My Profile</a></li>
+     <li><a href="#">Questions</a></li>
+     
+    </ul>
+    <!-- search bar -->
+    <button type="submit" class="btn btn-search">Search</button>
+      <input type="text" class="search-box" placeholder="Search Box" required >
+      
+    
+  </section>
+  <!-- Side menu content -->
+  <div class="side-menu-container" id="side-menu">
+    <ul>
+        <li><a href="#">Forum</a></li>
+        <li><a href="#">Members</a></li>
+        <li><a href="#">New Posts</a></li>
+        <li><a href="#">Forum Actions</a></li>
+        <li><a href="#">My Profile</a></li>
+        <li><a href="#">Questions</a></li>
+    </ul>
+  </div>
+  <!-- Mid body -->
+  <div id="forum-container" class="container " :class="{'container-height-toggle':toggleCollapse}" >
+    <div class="category"><h2 class="category-title">Some category title</h2>
+      <!-- Toggle icon here -->
+      <div class="  toggle-collapse collapse-icon" @click="toggleCollapse=!toggleCollapse"  :class="{'collapse-icon-position':toggleCollapse}">
+        <span class="h-line"></span>
+        <span class="v-line" :class="{'v-line-rotate':!toggleCollapse}" ></span>
+      </div></div>
+    
+        <div class="forum-head" >
+          <div class="forum-info">
+              <h3 class="header-forum">Forums</h3>
+              <h3 class="header-thread">Threads</h3>
+              <h3 class="header-post">Posts</h3>
+              <h3 class="header-recent">Recent updates</h3>
+          </div>
+          
+        </div>
+        <div class="forum-data"  >
+          <p class="p-forum">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam iste placeat ad!</p>
+          <p class="thread-p">Programming</p>
+          <p class="post-p">Computers</p>
+          <p class="recent-p">12/01/2018</p>
+          
+          <p class="p-forum">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Accusantium illo saepe voluptas!</p>
+          <p class="thread-p">Biology</p>
+          <p class="post-p">Science</p>
+          <p class="recent-p">11/01/2018</p>
+          <p class="p-forum">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nostrum aspernatur expedita esse.
+          </p>
+          <p class="thread-p">Physics</p>
+          <p class="post-p">Science</p>
+          <p class="recent-p">09/02/2018</p>
+        </div>
+      
+  </div>
+</div>
+  <script src="app.js"></script>
+</body>
+</html>

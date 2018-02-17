@@ -1,0 +1,78 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto+Mono:100,300,400,500,700|Roboto+Mono+Condensed:300,700);
+
+*{
+  padding: 0;
+  margin:0;
+  box-sizing: border-box;
+}
+
+body{
+  font-family: 'Roboto Mono', monospace;
+  /* background: #fafafa; */
+}
+/* Navigation Bar Styling */
+img{
+  width: 150px;
+  margin-top: 5px;
+}
+@media only screen and (max-width: 1023px){
+  img{
+    width:150px;
+    margin-bottom: -40px;
+  }
+}
+.navbar-menu .navbar-item{
+  transition: font-size 300ms ease;
+}
+.navbar-menu .navbar-item:hover{
+  font-size: 1.5rem;
+  background: none;
+}
+.logo-text{
+  height: 0;
+  position:absolute;
+  text-align: center;
+  left: 44px;
+  top: 13px;
+  font-size: 2rem;
+  color: #f8f8f8;
+  background: #424242;
+  text-shadow: 2px 2px 5px #141414;
+  opacity: 0;
+}
+/* .logo-text:hover{
+  left: 110px;
+} */
+
+.logo-text span{
+  font-weight: 400;
+  font-size: 3rem;
+  
+}
+.navbar{
+  border-bottom: 2px solid #4424508a; 
+}
+.navbar-menu{
+  margin-left: 20%;
+}
+
+.navbar-burger{
+ 
+  position: relative;
+  margin-top: -20px;
+  bottom : 30px;
+}
+.navbar-burger span{
+  padding: 1px;
+  width: 20px;
+  height: 2px;
+}
+.icon{
+  
+  margin: 0;
+}
+ /* END navigation bar styling  */
+ /* .field{
+   margin-left: 30%;
+   
+ } */
