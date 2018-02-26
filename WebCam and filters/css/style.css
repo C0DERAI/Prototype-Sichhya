@@ -1,0 +1,134 @@
+@import url("https://fonts.googleapis.com/css?family=Berkshire+Swash");
+
+body{
+  padding: 0;
+  margin: 0;
+  font-family: 'Berkshire Swash', cursive, sans-serif;
+  background: #ff9bac;
+}
+/* Nav-Bar */
+.nav-bar{
+  /* background: #a52bec; */
+
+  color: transparent;
+  
+  transition: 0.5s;
+  background-size: 200% auto;
+  box-shadow: 0 0 20px #eee;
+  background-image: linear-gradient(to right, #f942ff 0%, #ae3ef0 51%, #ff5bf7 100%);
+  box-shadow: 0 2px 10px rgba(71, 11, 63, 0.774)
+}
+.nav-bar:hover {
+  
+    background-position: right center; /* change the direction of the change here */
+}
+.nav-bar h1{
+  margin: 0;
+  text-align: center;
+  color: rgb(250, 81, 81);
+  font-size: 5rem;
+  margin-bottom: -10px;
+  text-transform: uppercase;
+  text-shadow: 0 4px 0 rgba(126, 32, 32, 0.4);
+  
+}
+.nav-bar p{
+  font-size: 10px;
+  text-align: center;
+  color: #f8c5f6;
+  padding-bottom: 3px;
+}
+/* Top container */
+.top-container{
+  width : 500px;
+  margin: 30px auto;
+  
+}
+
+/* buttons */
+.btn{
+  display: block;
+  width:100%;
+  padding: 10px;
+  margin: 2px auto;
+  border-radius: 5px;
+  background: #ff2c5a;
+  color: #b9b9b9;
+  font-family: 'Berkshire Swash', cursive, sans-serif;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  transition: color 500ms ease;
+}
+.btn::before{
+  content: '';
+  width: 20%;
+  height:40px;
+  background-color:rgba(241, 241, 241, 0.253);
+  position: absolute;
+  bottom:1px;
+  transform: skewX(30deg);
+  left:-120px;
+  transition: left 400ms ease;
+  
+}
+.btn:hover:before{
+  left:198px;
+}
+.btn:hover{
+  color: #fafafa;
+  background: #ff2352;
+}
+/* video and camera pic */
+.camera{
+  width: 566px;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  top:330px;
+  transition: opacity 500ms ;
+  opacity: 0;
+}
+#video{
+  width:76%;
+  margin-left: 10px;
+  z-index: 3;
+  opacity: 0;
+  transition: opacity 200ms;
+}
+.show{
+  opacity: 1;
+  z-index: 2;
+}
+
+/* filter selct option */
+#photo-filter{
+  padding: 10px;
+  width: 100%;
+  font-family: 'Berkshire Swash', cursive, sans-serif;
+  z-index: 1;
+ 
+}
+
+
+
+.bottom-container{
+  max-width: 960px;
+  margin: auto;
+  padding: 10px ;
+}
+/* captured photos */
+#photos{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 5px;
+}
+#photos img{
+  width: 100%;
+  border: 2px solid #7a7a7a;
+}
+
+/* canvas to none */
+#canvas{
+  display: none;
+}

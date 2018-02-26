@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="css/style.css">
+  <title>Phos</title>
+</head>
+<body>
+  <div class="nav-bar">
+    <h1>Phos</h1>
+    <p>Capture your imagingation.</p>
+  </div>
+  <!-- camera picture -->
+    <img src="img/camera6.png" alt="A selfie camera" id="cam-pic" class="camera responsive-img">
+  
+  <div class="top-container">
+    <video id="video" >WebCam not working ?!!</video>
+    <select id="photo-filter" >
+      <option value="none">Normal</option>
+      <option value="grayscale(100%)">GrayScale</option>
+      <option value="sepia(100%)">Sepia</option>
+      <option value="blur(10px)">Blur</option>
+      <option value="hue-rotate(89deg)">Hue</option>
+      <option value="invert(.8)">Invert</option>
+      <option value="contrast(150%)">Contrast</option>
+    </select>
+    <button id="start-btn" class="btn btn-start">Start</button>
+    <button id="capture-btn" class="btn btn-capture">Snap</button>
+    
+    
+    <button id="reset-btn" class="btn btn-reset">Reset</button>
+  </div>
+  <canvas id="canvas"></canvas>
+  <div class="bottom-container">
+    <div id="photos"></div>
+  </div>
+  <script src="script/app.js"></script>
+
+</body>
+
+</html>
